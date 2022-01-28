@@ -32,7 +32,7 @@ public class LawFactory : MonoBehaviour
         
         for (int i = 0; i < selectedTraitsCount; i++)
         {
-            var selectedIndex = Random.Range(0, selectedTraits.Count);
+            var selectedIndex = Random.Range(0, tempColl.Count);
             selectedTraits.Add(tempColl[selectedIndex]);
             tempColl.RemoveAt(selectedIndex);
         }
