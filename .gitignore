@@ -24,6 +24,9 @@
 /[Aa]ssets/Plugins/Editor/JetBrains*
 
 
+.DS_Store
+Assets/.DS_Store
+
 # Rider
 .idea/
 
