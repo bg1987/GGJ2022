@@ -5,15 +5,16 @@ using UnityEngine;
 public class Soul : MonoBehaviour
 {
     public Trait[] traits;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public bool HasTrait(Trait t)
     {
-        
+        for (int i = 0; i < traits.Length; i++)
+        {
+            if (traits[i].traitName == t.traitName)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }
