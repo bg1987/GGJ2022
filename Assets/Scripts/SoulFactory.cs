@@ -41,7 +41,7 @@ public class SoulFactory : MonoBehaviour
         int numberOfTraits = Random.Range(minTraitsPerSoul, maxTraitsPerSoul+1);
         var result = new Trait[numberOfTraits];
         var tempColl = new List<Trait>(collection.traits);
-        for (int i = 0; i < traitsPerSoul; i++)
+        for (int i = 0; i < numberOfTraits; i++)
         {
             var selectedIndex = Random.Range(0, tempColl.Count);
             result[i] = tempColl[selectedIndex];

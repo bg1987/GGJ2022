@@ -22,9 +22,9 @@ public class Soul : MonoBehaviour
 
     public void DrawTraits()
     {
-        foreach (Trait trait in traits)
+        for (int i = 0; i < traits.Length; i++)
         {
-            icons[0].sprite = trait.image;
+            icons[i].sprite = traits[i].image;
         }
     }
 }
