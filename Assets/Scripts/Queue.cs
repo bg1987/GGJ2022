@@ -23,6 +23,7 @@ public class Queue : MonoBehaviour
         }
     }
 
+    public Transform entrance;
     public List<Transform> slots;
 
     private void Start()
@@ -35,19 +36,27 @@ public class Queue : MonoBehaviour
 
     public void Progress()
     {
-        for (int i = 1; i < slots.Count; i++)
+        for (int i = 0; i < slots.Count; i++)
         {
             if (slots[i].childCount > 0)
             {
                 GameObject currentSoul = slots[i].transform.GetChild(0).gameObject;
-                currentSoul.transform.SetParent(slots[i-1],false);
-                if (i < 4)
+                if (i == 0)
                 {
-                    currentSoul.transform.GetChild(0).GetComponent<Animator>().Play("soul_climb", 1);
+                    currentSoul.transform.SetParent(entrance, false);
+                    currentSoul.transform.GetChild(0).GetComponent<Animator>().Play("soul_enter", 0);
                 }
                 else
                 {
-                    currentSoul.transform.GetChild(0).GetComponent<Animator>().Play("soul_move", 1);
+                    currentSoul.transform.SetParent(slots[i - 1], false);
+                    if (i < 4)
+                    {
+                        currentSoul.transform.GetChild(0).GetComponent<Animator>().Play("soul_climb", 1);
+                    }
+                    else
+                    {
+                        currentSoul.transform.GetChild(0).GetComponent<Animator>().Play("soul_move", 1);
+                    }
                 }
             }
         }

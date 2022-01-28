@@ -221,6 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec76d8a5508563e408098f0108ef2792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  entrance: {fileID: 558812128}
   slots: []
 --- !u!1 &300609783
 GameObject:
