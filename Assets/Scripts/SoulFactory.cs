@@ -23,10 +23,11 @@ public class SoulFactory : MonoBehaviour
         Create = false;
     }
 
-    public void CreateSoul()
+    public GameObject CreateSoul()
     {
         var soul = Instantiate(soulPrefab).GetComponent<Soul>();
         soul.traits = RandomizeTraits();
+        return soul.gameObject;
     }
 
     Trait[] RandomizeTraits()
