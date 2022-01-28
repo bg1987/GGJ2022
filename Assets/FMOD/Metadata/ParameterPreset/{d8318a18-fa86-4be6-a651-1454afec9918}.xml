@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{d8318a18-fa86-4be6-a651-1454afec9918}">
+		<property name="name">
+			<value>B2 Loop to Break</value>
+		</property>
+		<relationship name="folder">
+			<destination>{92ecb2db-c2d4-4846-b040-1818fad2d09f}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{4dd88605-d3c8-493b-917c-f69dd7d2d392}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{4dd88605-d3c8-493b-917c-f69dd7d2d392}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

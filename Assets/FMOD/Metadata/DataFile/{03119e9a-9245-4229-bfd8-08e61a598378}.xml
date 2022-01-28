@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="DataFile" id="{03119e9a-9245-4229-bfd8-08e61a598378}">
+		<property name="assetPath">
+			<value>WhatsApp Audio 2022-01-28 at 04.26.23.mpeg</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b84129f9-5b98-4021-ad3a-489d31515128}</destination>
+		</relationship>
+	</object>
+</objects>

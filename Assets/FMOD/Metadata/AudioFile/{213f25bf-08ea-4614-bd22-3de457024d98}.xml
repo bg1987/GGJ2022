@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{213f25bf-08ea-4614-bd22-3de457024d98}">
+		<property name="assetPath">
+			<value>GGJ 2022 S#1.ogg</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>84.210544217687072</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b84129f9-5b98-4021-ad3a-489d31515128}</destination>
+		</relationship>
+	</object>
+</objects>
