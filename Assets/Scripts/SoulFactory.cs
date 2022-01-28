@@ -23,11 +23,14 @@ public class SoulFactory : MonoBehaviour
         Create = false;
     }
 
-    public GameObject CreateSoul()
+    public Soul CreateSoul()
     {
-        var soul = Instantiate(soulPrefab).GetComponent<Soul>();
+        Transform firstSlot = Queue.Instance.slots[Queue.Instance.slots.Count-1];
+        var soulObject = Instantiate(soulPrefab,firstSlot,false);
+
+        var soul = soulObject.GetComponent<Soul>();
         soul.traits = RandomizeTraits();
-        return soul.gameObject;
+        return soul;
     }
 
     Trait[] RandomizeTraits()
