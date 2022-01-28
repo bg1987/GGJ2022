@@ -7,9 +7,8 @@ public class LawFactory : MonoBehaviour
     public TraitsCollection collection;
     public int minTraits = 3;
     public int maxTraits = 6;
-    public int maxRuleGroupSize = 2;
-    
-    
+    public int maxRuleGroupSize = 3;    
+        
     public bool create;
 
     // Update is called once per frame
@@ -65,7 +64,6 @@ public class LawFactory : MonoBehaviour
             group.traits = new Trait[] { selectedTraits[i] };
             generatedGroups.Add(group);
         }
-
 
         var law = ScriptableObject.CreateInstance<Law>();
         law.rules = generatedGroups.ToArray();

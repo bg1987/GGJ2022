@@ -10,6 +10,8 @@ public class SoulFactory : MonoBehaviour
     public TraitsCollection collection;
     
     public int traitsPerSoul = 3;
+    public int minTraitsPerSoul = 1;
+    public int maxTraitsPerSoul = 4;
     public GameObject soulPrefab;
 
     public bool Create;
@@ -30,12 +32,14 @@ public class SoulFactory : MonoBehaviour
 
         var soul = soulObject.GetComponent<Soul>();
         soul.traits = RandomizeTraits();
+        soul.DrawTraits();
         return soul;
     }
 
     Trait[] RandomizeTraits()
     {
-        var result = new Trait[traitsPerSoul];
+        int numberOfTraits = Random.Range(minTraitsPerSoul, maxTraitsPerSoul+1);
+        var result = new Trait[numberOfTraits];
         var tempColl = new List<Trait>(collection.traits);
         for (int i = 0; i < traitsPerSoul; i++)
         {
@@ -43,7 +47,7 @@ public class SoulFactory : MonoBehaviour
             result[i] = tempColl[selectedIndex];
             tempColl.RemoveAt(selectedIndex);
         }
-
+      
         return result;
     }
 }

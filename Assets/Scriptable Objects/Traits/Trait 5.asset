@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd2430643a2054dcd9e94e32167b1ef9, type: 3}
-  m_Name: Trait
+  m_Name: Trait 5
   m_EditorClassIdentifier: 
-  traitName: Trait
-  image: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  traitName: Trait 5
+  image: {fileID: 7748119188449234378, guid: eb1ca94e5e5edbe429bf65d4f7fd816f, type: 3}

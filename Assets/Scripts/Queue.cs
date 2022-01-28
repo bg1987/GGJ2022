@@ -39,7 +39,16 @@ public class Queue : MonoBehaviour
         {
             if (slots[i].childCount > 0)
             {
-                slots[i].transform.GetChild(0).transform.SetParent(slots[i-1],false);
+                GameObject currentSoul = slots[i].transform.GetChild(0).gameObject;
+                currentSoul.transform.SetParent(slots[i-1],false);
+                if (i < 4)
+                {
+                    currentSoul.transform.GetChild(0).GetComponent<Animator>().Play("soul_climb", 1);
+                }
+                else
+                {
+                    currentSoul.transform.GetChild(0).GetComponent<Animator>().Play("soul_move", 1);
+                }
             }
         }
     }
