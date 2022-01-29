@@ -52,9 +52,5 @@ public class Soul : MonoBehaviour
         faceSprite.sprite = face;
         bodyMask.sprite = body;
         headMask.sprite =    head;
-        Debug.Log(body);
-        Debug.Log(head);
-        Debug.Log(shirt);
-        Debug.Log(face);
     }
 }
