@@ -9,7 +9,7 @@ public class LawFactory : MonoBehaviour
     public Transform mainContainer;
     public GameObject heavenMarker;
     public GameObject hellMarker;
-    
+    public float chanceHeaven = 1;
     public int minTraits = 3;
     public int maxTraits = 6;
     public int maxRuleGroupSize = 3;    
@@ -106,7 +106,7 @@ public class LawFactory : MonoBehaviour
         law.rules = generatedGroups.ToArray();
         
         //randomize heaven/hell
-        law.heaven = Random.value > 0.5f;
+        law.heaven = Random.value <= chanceHeaven;
 
         return law;
     }
