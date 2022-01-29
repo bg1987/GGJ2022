@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1186642997}
   - component: {fileID: 410146084022773351}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65,7 +65,7 @@ GameObject:
   m_Component:
   - component: {fileID: 167604628330430918}
   - component: {fileID: 5561190366275525471}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Head Shape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 7005696383253920732}
   - component: {fileID: 8963505885275565865}
   - component: {fileID: 367195966944379587}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Soul
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6348733862055017020}
   - component: {fileID: 8045157764420833985}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trait 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -407,7 +407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6883576851228889564}
   - component: {fileID: 6011311498271686696}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Face Texture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -490,7 +490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1473669951398799896}
   - component: {fileID: 6308173718556111918}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shirt Texture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -573,7 +573,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7282482196862677137}
   - component: {fileID: 3108057790514735656}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trait 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -656,7 +656,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4067637932829610731}
   - component: {fileID: 279733336411242370}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -740,7 +740,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5021026731100098675}
   - component: {fileID: 1129161258200867774}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body Texture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -823,7 +823,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6577461226971191450}
   - component: {fileID: 3114020443319294649}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Internal Soul
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -874,7 +874,7 @@ GameObject:
   m_Component:
   - component: {fileID: 869794974153818614}
   - component: {fileID: 4560174314702876618}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Trait 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -957,7 +957,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7225596221804621919}
   - component: {fileID: 6686980978754864982}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Head Texture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
