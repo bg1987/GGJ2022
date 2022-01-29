@@ -7,6 +7,8 @@ public class LawFactory : MonoBehaviour
     public TraitsCollection collection;
     public GameObject ruleGroupPrefab;
     public Transform mainContainer;
+    public GameObject heavenMarker;
+    public GameObject hellMarker;
     
     public int minTraits = 3;
     public int maxTraits = 6;
@@ -28,6 +30,9 @@ public class LawFactory : MonoBehaviour
     {
         CleanContainer();
         var law = Generate();
+        
+        heavenMarker.SetActive(law.heaven);
+        hellMarker.SetActive(!law.heaven);
         
         foreach (var ruleGroup in law.rules)
         {
@@ -86,6 +91,7 @@ public class LawFactory : MonoBehaviour
                 selectedTraits.RemoveAt(selectedIndex);
             }
 
+            group.not = Random.value > 0.5f;
             generatedGroups.Add(group);
         }
 
@@ -93,12 +99,16 @@ public class LawFactory : MonoBehaviour
         for (int i = 0; i < selectedTraits.Count; i++)
         {
             var group = ScriptableObject.CreateInstance<RuleGroup>();
+            group.not = Random.value > 0.5f;
             @group.traits = new Trait[] { selectedTraits[i] };
             generatedGroups.Add(@group);
         }
 
         var law = ScriptableObject.CreateInstance<Law>();
         law.rules = generatedGroups.ToArray();
+        
+        //randomize heaven/hell
+        law.heaven = Random.value > 0.5f;
 
         return law;
     }
