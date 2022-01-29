@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 public class SoulFactory : MonoBehaviour
 {
-    
+    private int count = 0;
     public TraitsCollection collection;
     
     public int traitsPerSoul = 3;
@@ -60,6 +60,8 @@ public class SoulFactory : MonoBehaviour
         Sprite newShirt = shirts[Random.Range(0, shirtCount)];
         Sprite newFace = faces[Random.Range(0, faceCount)];
         soul.SetLook(newBody, newHead, newShirt, newFace);
+        soul.gameObject.name = "Soul " + count;
+        count++;
         return soul;
     }
 
