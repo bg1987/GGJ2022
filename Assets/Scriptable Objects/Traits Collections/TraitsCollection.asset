@@ -13,8 +13,21 @@ MonoBehaviour:
   m_Name: TraitsCollection
   m_EditorClassIdentifier: 
   traits:
-  - {fileID: 11400000, guid: ec3613ccbf6de924f99af6780e749c5f, type: 2}
-  - {fileID: 11400000, guid: 107667b9d71ced44f9b38938cd9245b5, type: 2}
-  - {fileID: 11400000, guid: b47a64efddce48842a6cd6f519c6d093, type: 2}
-  - {fileID: 11400000, guid: 7db8ad5cf80eaf8479c968b096060fff, type: 2}
+  - {fileID: 11400000, guid: f4ebc561e92f54d3fbfd4671ae9234c9, type: 2}
+  - {fileID: 11400000, guid: 04306c187d8bd45ef80a19da48feefca, type: 2}
   - {fileID: 11400000, guid: 1face6129d1a8a34c80369decb7cd713, type: 2}
+  - {fileID: 11400000, guid: ec3613ccbf6de924f99af6780e749c5f, type: 2}
+  - {fileID: 11400000, guid: 4911052bef9f04916bb6e2bd6207ce28, type: 2}
+  - {fileID: 11400000, guid: 7db8ad5cf80eaf8479c968b096060fff, type: 2}
+  - {fileID: 11400000, guid: b47a64efddce48842a6cd6f519c6d093, type: 2}
+  - {fileID: 11400000, guid: 2c3ea9c34972848af9ba711d40982da1, type: 2}
+  - {fileID: 11400000, guid: 96251abb4ed9e439db3fa077293d7f33, type: 2}
+  - {fileID: 11400000, guid: ef7c09dbec72e42b2ad628604728e5e4, type: 2}
+  - {fileID: 11400000, guid: 16c20a9ed0b1a46869cd5004cbac1925, type: 2}
+  - {fileID: 11400000, guid: 6c00d62b961ff4a42bfef84980da8eca, type: 2}
+  - {fileID: 11400000, guid: 107667b9d71ced44f9b38938cd9245b5, type: 2}
+  - {fileID: 11400000, guid: 55b3c000227554f4a85b716a2d05c959, type: 2}
+  - {fileID: 11400000, guid: ad42b4b66557941b38c8d59c8ab1fc07, type: 2}
+  - {fileID: 11400000, guid: b10d8d7598a6649a4b508a24e0328c25, type: 2}
+  - {fileID: 11400000, guid: d51caf9d3b15a44c98484760834bafb0, type: 2}
+  - {fileID: 11400000, guid: fcd9a5a0291d648489e465f6d7a1dfde, type: 2}
