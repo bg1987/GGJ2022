@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,7 @@ public class LawResolver : MonoBehaviour
     //true means a strike
     public bool EvaluateSoul(Law law, Soul soul, bool toHeaven)
     {
+        Debug.Log(string.Format("Judging {0}",soul.gameObject.name));
         bool soulPassed;
         //required to enter heaven
         if (law.heaven)
