@@ -91,7 +91,6 @@ public class LawFactory : MonoBehaviour
                 selectedTraits.RemoveAt(selectedIndex);
             }
 
-            group.not = Random.value > 0.5f;
             generatedGroups.Add(group);
         }
 
@@ -99,7 +98,6 @@ public class LawFactory : MonoBehaviour
         for (int i = 0; i < selectedTraits.Count; i++)
         {
             var group = ScriptableObject.CreateInstance<RuleGroup>();
-            group.not = Random.value > 0.5f;
             @group.traits = new Trait[] { selectedTraits[i] };
             generatedGroups.Add(@group);
         }
