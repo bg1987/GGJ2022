@@ -8,6 +8,13 @@ public class Soul : MonoBehaviour
 
     public List<SpriteRenderer> icons;
 
+    public SpriteRenderer bodySprite;
+    public SpriteRenderer headSprite;
+    public SpriteRenderer shirtSprite;
+    public SpriteRenderer faceSprite;
+    public SpriteMask bodyMask;
+    public SpriteMask headMask;
+
     public bool HasTrait(Trait t)
     {
         for (int i = 0; i < traits.Length; i++)
@@ -19,12 +26,25 @@ public class Soul : MonoBehaviour
         }
         return false;
     }
-
     public void DrawTraits()
     {
         for (int i = 0; i < traits.Length; i++)
         {
             icons[i].sprite = traits[i].image;
         }
+    }
+
+    public void SetLook(Sprite body, Sprite head, Sprite shirt, Sprite face)
+    {
+        bodySprite.sprite = body;
+        headSprite.sprite = head;
+        shirtSprite.sprite = shirt;
+        faceSprite.sprite = face;
+        bodyMask.sprite = body;
+        headMask.sprite = head;
+        Debug.Log(body);
+        Debug.Log(head);
+        Debug.Log(shirt);
+        Debug.Log(face);
     }
 }
