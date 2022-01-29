@@ -16,6 +16,28 @@ public class SoulFactory : MonoBehaviour
 
     public bool Create;
 
+    [Header("Costmetics")]
+    public List<Sprite> bodies;
+    public List<Sprite> heads;
+    public List<Sprite> shirts;
+    public List<Sprite> faces;
+    public List<Sprite> props;
+
+    int bodyCount;
+    int headCount;
+    int shirtCount;
+    int faceCount;
+    int propCount;
+
+    void Start()
+    {
+        bodyCount = bodies.Count;
+        headCount = heads.Count;
+        shirtCount = shirts.Count;
+        faceCount = faces.Count;
+        propCount = props.Count;
+    }
+
     private void Update()
     {
         if (Create)
@@ -33,6 +55,11 @@ public class SoulFactory : MonoBehaviour
         var soul = soulObject.GetComponent<Soul>();
         soul.traits = RandomizeTraits();
         soul.DrawTraits();
+        Sprite newBody = bodies[Random.Range(0, bodyCount)];
+        Sprite newHead = heads[Random.Range(0, headCount)];
+        Sprite newShirt = shirts[Random.Range(0, shirtCount)];
+        Sprite newFace = faces[Random.Range(0, faceCount)];
+        soul.SetLook(newBody, newHead, newShirt, newFace);
         return soul;
     }
 
@@ -49,5 +76,14 @@ public class SoulFactory : MonoBehaviour
         }
       
         return result;
+    }
+
+    private void SetLook(Soul soul)
+    {
+        Sprite newBody = bodies[Random.Range(0, bodyCount)];
+        Sprite newHead = heads[Random.Range(0, headCount)];
+        Sprite newShirt = shirts[Random.Range(0, shirtCount)];
+        Sprite newFace = faces[Random.Range(0, faceCount)];
+        soul.SetLook(newBody, newHead, newShirt, newFace);
     }
 }
