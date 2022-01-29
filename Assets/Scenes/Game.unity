@@ -123,6 +123,49 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &42498747
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 42498749}
+  - component: {fileID: 42498748}
+  m_Layer: 0
+  m_Name: LawResolver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &42498748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42498747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3418bb86363a43c58de111f9835d7c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &42498749
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42498747}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.0740747, y: 0.7127376, z: 431.12997}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &83365134
 GameObject:
   m_ObjectHideFlags: 0
@@ -1192,7 +1235,7 @@ MonoBehaviour:
       Soul","value":null,"$version":"A"},{"name":"Kick position","value":{"x":0.0,"y":0.0,"$type":"UnityEngine.Vector2"},"$version":"A"},{"name":"Hell
       Audio Source","value":{"$content":3,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"Bouncer
       Audio Source","value":{"$content":4,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"Flame
-      Animator","value":{"$content":5,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      Animator","value":{"$content":5,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"LawResolver","value":{"$content":6,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"CurrentLaw","value":null,"$version":"A"},{"name":"LawFactory","value":{"$content":7,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 1443580552}
     - {fileID: 206715685}
@@ -1200,6 +1243,8 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 1570285917}
+    - {fileID: 42498748}
+    - {fileID: 2127352688}
 --- !u!4 &1491440114
 Transform:
   m_ObjectHideFlags: 0

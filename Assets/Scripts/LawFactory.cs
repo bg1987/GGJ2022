@@ -24,9 +24,7 @@ public class LawFactory : MonoBehaviour
         create = false;
     }
 
-    
-    
-    Law CreateLaw()
+    public Law CreateLaw()
     {
         CleanContainer();
         var law = Generate();
@@ -35,7 +33,7 @@ public class LawFactory : MonoBehaviour
         {
             InstantiateRuleGroup(ruleGroup);
         }
-        // Canvas.ForceUpdateCanvases();
+
         return law;
     }
 
@@ -43,14 +41,12 @@ public class LawFactory : MonoBehaviour
     {
         foreach (Transform child in mainContainer)
         {
-            Debug.Log("Destroying");
             Destroy(child.gameObject);
         }
     }
 
     private void InstantiateRuleGroup(RuleGroup ruleGroup)
     {
-        Debug.Log("Creating rule group");
         var newRule = Instantiate(ruleGroupPrefab,mainContainer,false);
         var rc = newRule.GetComponent<RuleCanvas>();
         rc.ApplyRule(ruleGroup);
@@ -104,13 +100,6 @@ public class LawFactory : MonoBehaviour
         var law = ScriptableObject.CreateInstance<Law>();
         law.rules = generatedGroups.ToArray();
 
-        
-        Debug.Log("RuleGroups: " + law.rules.Length);
-        for (int i = 0; i < law.rules.Length; i++)
-        {
-            Debug.Log("Traits in group: "+ law.rules[i].traits.Length);
-        }
-        
         return law;
     }
 }

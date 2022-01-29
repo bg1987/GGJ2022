@@ -5,9 +5,6 @@ using UnityEngine;
 
 public class LawResolver : MonoBehaviour
 {
-    public LawFactory laws;
-    public SoulFactory souls;
-    
     public bool EvaluateSoul(Law law, Soul soul, bool toHeaven)
     {
         foreach (var rule in law.rules)
@@ -18,7 +15,7 @@ public class LawResolver : MonoBehaviour
             }
         }
         return false;
-    }
+       }
 
     bool EvaluateRule(RuleGroup rules, Soul soul)
     {
