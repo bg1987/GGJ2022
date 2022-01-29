@@ -46,7 +46,7 @@ public class Queue : MonoBehaviour
                 {
                     currentSoul.transform.SetParent(entrance, false);
                     currentSoul.transform.GetChild(0).GetComponent<Animator>().Play("soul_enter", 0);
-                    failedTest = !resolver.EvaluateSoul(currentLaw, currentSoul.GetComponent<Soul>(), true);
+                    failedTest = resolver.EvaluateSoul(currentLaw, currentSoul.GetComponent<Soul>(), true);
                     if (failedTest)
                     {
                         Debug.Log("HEAVEN WRONG");
