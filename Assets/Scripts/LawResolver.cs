@@ -9,7 +9,7 @@ public class LawResolver : MonoBehaviour
     //true means a strike
     public bool EvaluateSoul(Law law, Soul soul, bool toHeaven)
     {
-         Debug.Log(string.Format("Judging {0}",soul.gameObject.name));
+        //Debug.Log(string.Format("Judging {0}",soul.gameObject.name));
         bool soulPassed;
         //required to enter heaven
         if (law.heaven)
@@ -17,15 +17,18 @@ public class LawResolver : MonoBehaviour
             //sending to heaven
             if (toHeaven)
             {
+                Debug.Log("Enters HEAVEN!");
                 soulPassed = MatchAnyRule(law, soul);
             }
             //sending to hell
             else
             {
+                Debug.Log("Kicked to HELL!");
                 //doesnt fit any rule to heaven
-                 soulPassed = !MatchAnyRule(law, soul);
+                soulPassed = !MatchAnyRule(law, soul);
             }
         }
+        //required to enter hell
         else
         {
             if (toHeaven)
@@ -37,7 +40,15 @@ public class LawResolver : MonoBehaviour
                 soulPassed = MatchAnyRule(law, soul);
             }
         }
-
+        if (soulPassed)
+        {
+            Debug.Log("Soul PASSED!");
+        }
+        else
+        {
+            Debug.Log("Soul FAILED!");
+        }
+        
         return !soulPassed;
     }
 
@@ -56,13 +67,13 @@ public class LawResolver : MonoBehaviour
     {
         foreach (var rule in law.rules)
         {
-            if (!EvaluateRule(rule, soul))
+            if (EvaluateRule(rule, soul))
             {
-                return false;
+                return true;
             }
         }
 
-        return true;
+        return false;
     }
 
     bool EvaluateRule(RuleGroup rules, Soul soul)

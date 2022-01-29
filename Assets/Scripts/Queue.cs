@@ -70,7 +70,6 @@ public class Queue : MonoBehaviour
                 }
             }
         }
-
         return failedTest;
     }
 }
