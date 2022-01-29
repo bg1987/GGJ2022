@@ -15,6 +15,14 @@ public class Soul : MonoBehaviour
     public SpriteMask bodyMask;
     public SpriteMask headMask;
 
+    public Animator floatAnimator;
+
+    void Start()
+    {
+        floatAnimator.speed = Random.Range(0.9f, 1.1f);
+        floatAnimator.Play("float", 0, Random.Range(0f, 1f));
+    }
+
     public bool HasTrait(Trait t)
     {
         for (int i = 0; i < traits.Length; i++)
@@ -41,7 +49,7 @@ public class Soul : MonoBehaviour
         shirtSprite.sprite = shirt;
         faceSprite.sprite = face;
         bodyMask.sprite = body;
-        headMask.sprite = head;
+        headMask.sprite =    head;
         Debug.Log(body);
         Debug.Log(head);
         Debug.Log(shirt);
