@@ -16,6 +16,7 @@ public class Soul : MonoBehaviour
     public SpriteMask headMask;
 
     public Animator floatAnimator;
+    public Animator traitsAnimator;
 
     void Start()
     {
@@ -40,6 +41,7 @@ public class Soul : MonoBehaviour
         {
             icons[i].sprite = traits[i].image;
         }
+        traitsAnimator.SetInteger("Traits", traits.Length);
     }
 
     public void SetLook(Sprite body, Sprite head, Sprite shirt, Sprite face)
