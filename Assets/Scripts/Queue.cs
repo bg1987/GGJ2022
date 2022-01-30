@@ -11,6 +11,9 @@ public class Queue : MonoBehaviour
     public static Queue Instance { get { return _instance; } }
 
     public LawResolver resolver;
+    public List<AudioClip> yeas;
+    public AudioSource heaven;
+
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -46,6 +49,8 @@ public class Queue : MonoBehaviour
                 {
                     currentSoul.transform.SetParent(entrance, false);
                     currentSoul.transform.GetChild(0).GetComponent<Animator>().Play("soul_enter", 0);
+                    heaven.Play();
+                    currentSoul.GetComponent<AudioSource>().PlayOneShot(yeas[UnityEngine.Random.Range(0,yeas.Count)]);
                     failedTest = resolver.EvaluateSoul(currentLaw, currentSoul.GetComponent<Soul>(), true);
                     if (failedTest)
                     {
